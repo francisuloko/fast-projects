@@ -1,0 +1,41 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spread the Word</title>
+    <style>
+      body {
+        display: grid;
+        place-items: center;
+      }
+      #display {
+        padding: 10px;
+        color: black;
+      }
+      #input {
+        border: 0.5px solid lightgray;
+        outline: 0;
+        padding: 5px;
+        width: 100px;
+        height: 20px;
+        font-size: 8px;
+        color: #333;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+   <div id="display"></div>
+   <input id="input" type="text" placeholder="Enter text" onkeyup="handleChange()" />
+
+   <script>
+     const display = document.getElementById("display");
+     const input = document.getElementById("input");
+
+     function handleChange() {
+       display.textContent = input.value;
+     }
+   </script>
+  </body>
+</html>
