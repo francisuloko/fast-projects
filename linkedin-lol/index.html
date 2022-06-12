@@ -108,12 +108,8 @@
           </main>
         );
       };
-      const Footer = ({
-        isHovering,
-        handleMouseOver,
-        handleMouseOut,
-      }) => {
-        const [count,setCount] = React.useState(1);
+      const Footer = ({ isHovering, handleMouseOver, handleMouseOut }) => {
+        const [count, setCount] = React.useState(1);
         const [reaction, setReactions] = React.useState([
           {
             key: "like",
@@ -125,21 +121,6 @@
             count: 0,
             icon: "./love.png",
           },
-          // {
-          //   key: "celebrate",
-          //   count: 0,
-          //   icon: "./celebrate.png",
-          // },
-          // {
-          //   key: "insightful",
-          //   count: 0,
-          //   icon: "./insightful.png",
-          // },
-          // {
-          //   key: "support",
-          //   count: 0,
-          //   icon: "./support.png",
-          // },
           {
             key: "haha",
             count: 0,
@@ -148,15 +129,11 @@
         ]);
 
         const list = reaction.map((r) => (
-          <img
-            className="top-reaction"
-            src={r.icon}
-            key={r.key}
-          />
+          <img className="top-reaction" src={r.icon} key={r.key} />
         ));
         const handleClick = () => {
           setCount(count + 1);
-        }
+        };
         return (
           <footer>
             <div className="reaction-counter flex">
